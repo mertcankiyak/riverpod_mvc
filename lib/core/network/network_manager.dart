@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:riverpod_demo/core/constants/app_constants.dart';
+
+import '../constants/app_constants.dart';
 
 class NetworkManager {
   static final NetworkManager _instance = NetworkManager._internal();

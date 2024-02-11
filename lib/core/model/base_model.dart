@@ -1,4 +1,5 @@
-import 'package:riverpod_demo/core/model/error_model.dart';
+
+import 'error_model.dart';
 
 abstract class BaseModel<T> {
   ErrorModel? error;

@@ -1,8 +1,7 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
-import 'package:riverpod_demo/core/model/error_model.dart';
-
 import '../model/base_model.dart';
+import '../model/error_model.dart';
 
 class RepositoryManager {
   Dio? dio;

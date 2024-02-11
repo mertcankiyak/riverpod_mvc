@@ -1,16 +1,16 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:riverpod_demo/core/network/repository_manager.dart';
-import 'package:riverpod_demo/features/home/controller/home_controller.dart';
-import 'package:riverpod_demo/features/home/controller/home_state.dart';
-import 'package:riverpod_demo/features/home/service/home_service.dart';
-import 'package:riverpod_demo/features/landing/controller/landing_controller.dart';
-import 'package:riverpod_demo/features/landing/controller/landing_state.dart';
-import 'package:riverpod_demo/features/login/service/login_service.dart';
+import '../../features/home/controller/home_controller.dart';
+import '../../features/home/controller/home_state.dart';
+import '../../features/home/service/home_service.dart';
+import '../../features/landing/controller/landing_controller.dart';
+import '../../features/landing/controller/landing_state.dart';
 import '../../features/login/controller/login_controller.dart';
 import '../../features/login/controller/login_state.dart';
+import '../../features/login/service/login_service.dart';
 import '../network/network_manager.dart';
+import '../network/repository_manager.dart';
 
 final di = GetIt.instance;
 

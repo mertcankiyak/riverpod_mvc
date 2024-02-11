@@ -1,5 +1,8 @@
 
+import 'package:riverpod_mvc/product/extension/shared_pref_extension.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../product/enums/shared_pref_enum.dart';
 
 class SharedPreferencesManager {
   static final SharedPreferencesManager instance = _instance;
