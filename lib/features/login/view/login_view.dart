@@ -17,7 +17,6 @@ class LoginView extends ConsumerWidget with LoginFormValidator {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     var diReference = di<StateNotifierProvider<LoginController, LoginState>>();
-
     ref.listen(diReference, (previous, next) {
       if (next.loginStateStatus == LoginStateStatus.completed) {
         Navigator.pushAndRemoveUntil(
@@ -82,7 +81,7 @@ class LoginView extends ConsumerWidget with LoginFormValidator {
 
   Column _headerArea(BuildContext context) {
     return Column(
-       
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           "WELCOME FRIENDS!",

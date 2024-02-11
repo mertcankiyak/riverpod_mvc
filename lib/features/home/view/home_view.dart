@@ -14,6 +14,7 @@ class HomeView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     var diReference = di<StateNotifierProvider<HomeController, HomeState>>();
+
     return Scaffold(
       backgroundColor: const Color(0xFF122432),
       appBar: AppBar(
