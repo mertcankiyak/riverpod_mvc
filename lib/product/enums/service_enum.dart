@@ -1,0 +1,1 @@
+enum ServiceEndpointEnum {login, listUser}
