@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
@@ -34,6 +36,18 @@ class NetworkManager {
           await Future.delayed(const Duration(seconds: 2));
           return handler.resolve(await dio.fetch(e.requestOptions));
         }
+
+        //Network isteklerinde oluşabilecek hataları manager kısmında ele alınıp,
+        //istenilen aksiyonlar burada gerçekleştirilecek
+        if (e.response?.statusCode == 401) {
+          //Kullanıcını yetkisiz işlem yaptığı için muhtemel olarak token'ı öldü.
+          //Varsa refresh token servisi kullanılmalı, yoksa login sayfasına yönlendirilmeli.
+          log("Status code: 401");
+          handler.next(e);
+        }
+
+        //Status code kontrolleri detaylandırılıp, ilgili durumlara göre yapılacak işlemler özelleştirilebilir.
+
         return handler.next(e);
       },
       onRequest: (options, handler) {
